@@ -1,6 +1,6 @@
 {
   "name": "react-native-masonry-gridview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React Native component for rendering a masonry layout of items in columns.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",

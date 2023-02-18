@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Dimensions, View } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
 
 interface Props<T> {
   items: T[];
@@ -29,10 +29,10 @@ function MasonryGridView<T>({ items, renderItem, columns }: Props<T>) {
   useEffect(() => {
     const chunks = chunkArray(items, columnCount);
     setGrid(chunks);
-  }, [items]);
+  }, [items, columnCount]);
 
   return (
-    <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+    <View style={styles.grid}>
       {grid.map((column, columnIndex) => (
         <View key={columnIndex} style={{ width: columnWidth }}>
           {column.map((item, itemIndex) => (
@@ -45,5 +45,12 @@ function MasonryGridView<T>({ items, renderItem, columns }: Props<T>) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+});
 
 export { MasonryGridView };

@@ -1,1 +1,1 @@
-export { MasonryGridView } from './MasonryGridView'
+export { MasonryGridView } from './MasonryGridView';
