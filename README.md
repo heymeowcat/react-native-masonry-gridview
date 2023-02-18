@@ -15,12 +15,14 @@ import { MasonryGridView } from 'react-native-masonry-gridview';
 
 // ...
 
-    <MasonryGridView
-    items={notes}
-    columns={2}
-    renderItem={item => <MasonryNote item={item} />}
-    />
+<MasonryGridView
+  items={notes}
+  columns={2}
+  renderItem={(item) => <MasonryNote item={item} />}
+/>;
 ```
+
+![preview](./demo.png)
 
 ## Contributing
 
