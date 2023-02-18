@@ -11,11 +11,15 @@ npm install react-native-masonry-gridview
 ## Usage
 
 ```js
-import { multiply } from 'react-native-masonry-gridview';
+import { MasonryGridView } from 'react-native-masonry-gridview';
 
 // ...
 
-const result = await multiply(3, 7);
+    <MasonryGridView
+    items={notes}
+    columns={2}
+    renderItem={item => <MasonryNote item={item} />}
+    />
 ```
 
 ## Contributing
