@@ -24,7 +24,7 @@ function MasonryGridView<T>({ items, renderItem, columns }: Props<T>) {
   const [grid, setGrid] = useState<T[][]>([]);
   const screenWidth = Dimensions.get('window').width;
   const columnCount = columns || 2;
-  const columnWidth = (screenWidth - 20) / columnCount;
+  const columnWidth = screenWidth / columnCount;
 
   useEffect(() => {
     const chunks = chunkArray(items, columnCount);
